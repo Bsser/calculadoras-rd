@@ -6,6 +6,7 @@ const R = {
   // Escala anual ISR asalariados 2026 (DGII): [desde, cuota fija, tasa]
   isr: [[867123, 79776, 0.25], [624329, 31216, 0.20], [416220, 0, 0.15]],
   divisorDiario: 23.83,
+  jornada: 44, topeExtra35: 68,       // art. 147 (44 h semanales) y art. 203 (35% hasta 68 h, 100% después)
 };
 
 function isrAnual(renta) {
@@ -57,7 +58,17 @@ function prestaciones(salarioMensual, meses, mesesDesdeVacaciones, mesesEsteAno,
   return r;
 }
 
-if (typeof module !== "undefined") module.exports = { isrAnual, salarioNeto, regalia, preaviso, cesantia, vacaciones, prestaciones };
+// Horas extra (art. 203 CT): hora normal = salario ÷ 23.83 ÷ 8; +35% hasta 68 h semanales, +100% desde ahí.
+function horasExtra(salarioMensual, horasSemana, jornada = R.jornada) {
+  const hora = salarioMensual / R.divisorDiario / 8;
+  const extras = Math.max(0, horasSemana - jornada);
+  const h35 = Math.min(extras, Math.max(0, R.topeExtra35 - jornada));
+  const h100 = extras - h35;
+  const p35 = h35 * hora * 1.35, p100 = h100 * hora * 2;
+  return { hora, h35, h100, p35, p100, total: p35 + p100 };
+}
+
+if (typeof module !== "undefined") module.exports = { isrAnual, salarioNeto, regalia, preaviso, cesantia, vacaciones, prestaciones, horasExtra };
 
 // ---------- página ----------
 if (typeof document !== "undefined") {
@@ -85,6 +96,15 @@ if (typeof document !== "undefined") {
         fila(`Vacaciones (${r.dias.vacaciones} días)`, rd(r.vacaciones)),
         fila("Regalía proporcional", rd(r.regalia)),
         fila("Total estimado", rd(r.total), 1),
+      ]);
+    },
+    "f-extra": () => {
+      const r = horasExtra(n("he-salario"), n("he-horas"), n("he-jornada") || R.jornada);
+      pinta("r-extra", [
+        fila("Valor de tu hora normal", rd(r.hora)),
+        fila(`${r.h35} h extra al 135%`, rd(r.p35)),
+        fila(`${r.h100} h extra al 200%`, rd(r.p100)),
+        fila("Pago por horas extra en la semana", rd(r.total), 1),
       ]);
     },
   };

@@ -25,4 +25,10 @@ assert.strictEqual(c.vacaciones(30, 7), 8);
 const p = c.prestaciones(23830, 24, 12, 12, "desahucio");     // salario diario 1,000
 cerca(p.diario, 1000); cerca(p.preaviso, 28000); cerca(p.cesantia, 42000); cerca(p.vacaciones, 14000); cerca(p.regalia, 23830);
 assert.strictEqual(c.prestaciones(23830, 24, 12, 12, "renuncia").cesantia, 0);
+
+const he = c.horasExtra(23830, 50);                             // hora normal 125
+cerca(he.hora, 125); assert.strictEqual(he.h35, 6); cerca(he.total, 6 * 125 * 1.35);
+const he2 = c.horasExtra(23830, 72);                            // 24 h al 35% + 4 h al 100%
+assert.strictEqual(he2.h35, 24); assert.strictEqual(he2.h100, 4); cerca(he2.total, 4050 + 1000);
+assert.strictEqual(c.horasExtra(23830, 40).total, 0);
 console.log("OK: calculadoras");

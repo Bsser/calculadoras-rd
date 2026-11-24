@@ -19,7 +19,7 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 5. Día 1 del mes: revisar si cambió alguna tasa (TSS, DGII, salario mínimo). Si cambió, actualizar `calc.js`, `plantilla.py` y regenerar el Excel en el repo privado, y anotar en `ventas/propuesta-actualizacion.md` que hay que subir la versión nueva a Gumroad.
 
 ## Cola de temas (SEO)
-- [ ] Calculadora de horas extra en RD (art. 203: 35% y 100%)
+- [x] Calculadora de horas extra en RD (art. 203: 35% y 100%)
 - [ ] Salario mínimo 2026 en RD por tamaño de empresa y sector (tabla)
 - [ ] Calculadora de vacaciones (días que te tocan y cuánto cobras)
 - [ ] Calculadora de ITBIS (18%): sumar y quitar el impuesto
@@ -42,3 +42,4 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 
 ## Registro
 - 2026-11-24: calculadoras, plantilla Excel y sitio con 3 páginas creados.
+- 2026-11-24: calculadora-horas-extra-rd (calculadora de horas extra, art. 203).

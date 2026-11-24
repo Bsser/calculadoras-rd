@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de horas extra en RD 2026: cuánto te pagan (35% y 100%) | Calculadoras RD</title>
+<meta name="description" content="Calcula gratis tus horas extra en República Dominicana: valor de tu hora normal, recargo del 35% hasta 68 horas semanales y del 100% después.">
+<link rel="canonical" href="https://bsser.github.io/calculadoras-rd/calculadora-horas-extra-rd/">
+<meta name="google-site-verification" content="4F6GvPItG1MgDsxIkhHlMnWlIL_Nr4-tKKIEYM5F8QM">
+<link rel="stylesheet" href="../estilo.css">
+<script src="../calc.js" defer></script>
+</head><body>
+<header><a class="marca" href="../">Calculadoras RD</a><span>Calculadoras laborales gratis para República Dominicana</span></header>
+<main><article><h1>Calculadora de horas extra en RD 2026: cuánto te pagan (35% y 100%)</h1><p class='fecha'>2026-11-24</p><p>Si en tu trabajo te quedas más tiempo del que dice tu contrato, esas horas no se pagan igual que las normales. El <strong>Código de Trabajo</strong> dominicano obliga a pagarlas con un <strong>recargo</strong>. Escribe tu salario y las horas que trabajaste en la semana, y la calculadora te dice cuánto te deben por horas extra.</p>
+<form class="calc" id="f-extra">
+<label>Salario mensual (RD$)<input id="he-salario" inputmode="decimal" placeholder="30000" required></label>
+<label>Horas que trabajaste en la semana<input id="he-horas" inputmode="decimal" placeholder="52" required></label>
+<label>Tu jornada semanal normal (horas)<input id="he-jornada" inputmode="decimal" value="44"></label>
+<button>Calcular horas extra</button>
+<div class="resultado" id="r-extra" aria-live="polite"></div>
+</form>
+
+<h2>Qué es una hora extra</h2>
+<p>La jornada normal la fija tu contrato, pero la ley le pone un límite: el <strong>artículo 147 del Código de Trabajo</strong> dice que no puede pasar de <strong>ocho horas al día ni de 44 horas a la semana</strong>. Toda hora que trabajes por encima de tu jornada normal es una <strong>hora extraordinaria</strong> (lo que todos llamamos "hora extra").</p>
+<p>Si tu contrato dice una jornada más corta, por ejemplo 40 horas, cambia el campo "jornada semanal normal" de la calculadora. Si no lo sabes, deja 44, que es el máximo legal y lo más común.</p>
+<h2>Cuánto se paga cada hora extra</h2>
+<p>El <strong>artículo 203 del Código de Trabajo</strong> fija dos niveles de recargo sobre el valor de tu hora normal:</p>
+<table>
+<thead>
+<tr>
+<th>Horas en la semana</th>
+<th>Recargo mínimo</th>
+<th>Se paga a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De la jornada normal hasta 68 horas</td>
+<td>35%</td>
+<td>135% de la hora normal</td>
+</tr>
+<tr>
+<td>Más de 68 horas</td>
+<td>100%</td>
+<td>200% (el doble) de la hora normal</td>
+</tr>
+</tbody>
+</table>
+<p>La ley habla de un aumento <strong>"no menor"</strong> de esos porcentajes. Es decir, son el mínimo: tu empresa puede pagarte más si así lo acordaron, pero nunca menos.</p>
+<h2>Cómo sacar el valor de tu hora normal</h2>
+<p>Para llegar a la hora se parte del <strong>salario diario</strong>, que en República Dominicana se calcula dividiendo el salario mensual entre <strong>23.83</strong> (el promedio de días laborables del mes). Después se divide entre las 8 horas de la jornada diaria:</p>
+<p><strong>Hora normal = salario mensual ÷ 23.83 ÷ 8</strong></p>
+<p>Con un sueldo de RD$30,000, el salario diario es unos RD$1,258.92 y la hora normal sale en unos <strong>RD$157.36</strong>.</p>
+<h2>Ejemplo con números</h2>
+<p>Ganas <strong>RD$30,000</strong> al mes, tu jornada es de 44 horas y esta semana trabajaste <strong>52 horas</strong>.</p>
+<ol>
+<li>Hora normal: 30,000 ÷ 23.83 ÷ 8 = <strong>RD$157.36</strong>.</li>
+<li>Horas extra: 52 − 44 = <strong>8 horas</strong>, todas por debajo del límite de 68, así que van al 35%.</li>
+<li>Valor de cada hora extra: 157.36 × 1.35 = <strong>RD$212.44</strong>.</li>
+<li>Pago de la semana por horas extra: 8 × 212.44 = <strong>RD$1,699.54</strong> (aproximado).</li>
+</ol>
+<p>Ahora una semana muy pesada: con el mismo sueldo trabajas <strong>72 horas</strong>. Hay 28 horas extra: las primeras 24 (de 44 a 68) van al 35% y las 4 restantes van al 100%.</p>
+<ul>
+<li>24 × 157.36 × 1.35 = RD$5,098.62</li>
+<li>4 × 157.36 × 2 = RD$1,258.92</li>
+<li>Total: unos <strong>RD$6,357.53</strong> solo en horas extra esa semana.</li>
+</ul>
+<h2>Hay un límite de horas extra</h2>
+<p>Las horas extra no pueden ser ilimitadas. El Código de Trabajo permite al empleador pedirlas cuando aumenta el trabajo de forma extraordinaria, pero con un tope de <strong>80 horas por trimestre</strong>. Si te piden muchas más que eso de forma habitual, conviene que consultes al Ministerio de Trabajo.</p>
+<h2>Horas nocturnas, domingos y días feriados</h2>
+<p>Esta calculadora solo aplica el recargo de las horas extra. Hay otros pagos que pueden sumarse aparte:</p>
+<ul>
+<li><strong>Trabajo nocturno.</strong> El Código considera nocturno el trabajo entre las 9:00 p. m. y las 7:00 a. m., y las fuentes consultadas coinciden en que lleva un recargo no menor de 15% sobre la hora normal. Si haces horas extra de noche, pregunta a tu empleador o al Ministerio de Trabajo cómo se combinan los dos recargos en tu caso.</li>
+<li><strong>Descanso semanal y días feriados.</strong> Trabajar en tu día de descanso o en un feriado tiene reglas propias de pago, distintas de las de horas extra. No las mezcles con este cálculo.</li>
+</ul>
+<p>Si alguno de estos casos es el tuyo, el resultado de la calculadora será solo una parte de lo que te deben.</p>
+<h2>Las horas extra pagan descuentos</h2>
+<p>A diferencia de la <a href="../calculadora-regalia-pascual-2026/">regalía pascual</a>, que está exenta, lo que cobras por horas extra se suma a tu salario del mes. Eso quiere decir que, en general, se le aplican los descuentos de AFP, SFS e ISR. Para ver cuánto te queda en mano, suma las horas extra a tu sueldo y usa la <a href="../calculadora-salario-neto-rd-2026/">calculadora de salario neto 2026</a>.</p>
+<p>Las horas extra tampoco suelen contar como salario ordinario para la regalía pascual. Si te despidieron, revisa tu caso con la <a href="../calculadora-prestaciones-laborales-rd/">calculadora de prestaciones laborales</a>; si cobrabas horas extra de forma habitual, confirma con el Ministerio de Trabajo o con un abogado laboral cómo influyen en el salario que se usa para calcularlas.</p>
+<h2>Qué hacer si no te pagan las horas extra</h2>
+<ol>
+<li><strong>Anota tus horas.</strong> Guarda la hora de entrada y salida de cada día, fotos del reloj de marcar, mensajes o correos donde te pidieron quedarte.</li>
+<li><strong>Revisa tu volante de pago.</strong> Las horas extra deben aparecer separadas del sueldo base.</li>
+<li><strong>Habla con Recursos Humanos</strong> con tus números en mano. Muchas veces es un error de nómina.</li>
+<li><strong>Acude al Ministerio de Trabajo</strong> (mt.gob.do) si no se resuelve. Tiene inspectores y un servicio de orientación gratis para trabajadores.</li>
+</ol>
+<p><em>Resultado orientativo. El cálculo usa el divisor 23.83 y una jornada diaria de 8 horas; si tu contrato tiene otra jornada, cobras por comisión o haces horas nocturnas, confirma con el Ministerio de Trabajo o con un abogado laboral.</em></p></article><aside class="cta">
+<h3>¿Llevas la nómina de tu negocio o de tu casa?</h3>
+<p>La <b>Plantilla Excel Nómina RD 2026</b> calcula sola AFP, SFS, ISR, salario neto, regalía pascual y prestaciones de hasta 30 empleados. Solo escribes el salario. Funciona en Excel y Google Sheets.</p>
+<a class="boton" href="https://jontastic64.gumroad.com/l/nomina-rd-2026">Descargar la plantilla · US$9</a>
+<p class="gratis">Más plantillas Excel: <a href="https://jontastic64.gumroad.com/l/inventario-ventas-rd">inventario y ventas con ITBIS (US$9)</a> · <a href="https://jontastic64.gumroad.com/l/presupuesto-familiar-rd">presupuesto familiar y deudas (US$5)</a> · <a href="https://jontastic64.gumroad.com/l/control-alquileres-rd">control de alquileres (US$9)</a></p>
+<p class="gratis">¿Compras o vendes un terreno? <a href="https://bsser.github.io/terreno-seguro-rd/">Terreno Seguro RD</a> · ¿Vives fuera? <a href="https://bsser.github.io/tramites-rd-exterior/">Trámites RD Exterior</a></p>
+</aside></main>
+<footer>Resultados orientativos, no sustituyen asesoría legal ni contable. Sitio independiente, no afiliado al Ministerio de Trabajo, la TSS ni la DGII; confirma en mt.gob.do, tss.gob.do y dgii.gov.do.</footer>
+</body></html>
