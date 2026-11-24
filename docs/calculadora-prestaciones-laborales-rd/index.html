@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de prestaciones laborales en RD (preaviso, cesantía y vacaciones) | Calculadoras RD</title>
+<meta name="description" content="Calcula tus prestaciones laborales en República Dominicana según el Código de Trabajo: preaviso, cesantía, vacaciones y regalía proporcional, por desahucio o renuncia.">
+<link rel="canonical" href="https://bsser.github.io/calculadoras-rd/calculadora-prestaciones-laborales-rd/">
+<meta name="google-site-verification" content="4F6GvPItG1MgDsxIkhHlMnWlIL_Nr4-tKKIEYM5F8QM">
+<link rel="stylesheet" href="../estilo.css">
+<script src="../calc.js" defer></script>
+</head><body>
+<header><a class="marca" href="../">Calculadoras RD</a><span>Calculadoras laborales gratis para República Dominicana</span></header>
+<main><article><h1>Calculadora de prestaciones laborales en RD (preaviso, cesantía y vacaciones)</h1><p class='fecha'>2026-11-24</p><p>Si te despidieron sin causa (desahucio) o renunciaste, esta calculadora estima lo que te corresponde según el <strong>Código de Trabajo de la República Dominicana</strong>.</p>
+<form class="calc" id="f-prest">
+<label>Salario mensual (RD$)<input id="pr-salario" inputmode="decimal" placeholder="25000" required></label>
+<label>Años trabajados<input id="pr-anos" inputmode="numeric" value="0"></label>
+<label>Meses adicionales<input id="pr-meses" inputmode="numeric" value="0"></label>
+<label>Meses desde tus últimas vacaciones (12 si no las tomaste este año)<input id="pr-vac" inputmode="numeric" value="12"></label>
+<label>Meses trabajados en el año de la salida (para la regalía)<input id="pr-ano" inputmode="numeric" value="11"></label>
+<label>Cómo terminó el contrato<select id="pr-motivo"><option value="desahucio">Me despidieron sin causa (desahucio)</option><option value="renuncia">Renuncié (dimisión simple)</option></select></label>
+<button>Calcular prestaciones</button>
+<div class="resultado" id="r-prest" aria-live="polite"></div>
+</form>
+
+<h2>Qué incluye cada partida</h2>
+<p><strong>Salario diario.</strong> Todo se calcula por días. El salario diario es el salario mensual dividido entre <strong>23.83</strong>, el promedio de días laborables al mes que se usa en la práctica.</p>
+<p><strong>Preaviso (art. 76).</strong> Es el aviso previo que el empleador debe dar o pagar si termina el contrato sin causa:</p>
+<table>
+<thead>
+<tr>
+<th>Tiempo trabajado</th>
+<th>Días de preaviso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De 3 a 6 meses</td>
+<td>7 días</td>
+</tr>
+<tr>
+<td>De 6 meses a 1 año</td>
+<td>14 días</td>
+</tr>
+<tr>
+<td>Más de 1 año</td>
+<td>28 días</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cesantía (art. 80).</strong> Es una compensación por los años de servicio:</p>
+<table>
+<thead>
+<tr>
+<th>Tiempo trabajado</th>
+<th>Días de cesantía</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De 3 a 6 meses</td>
+<td>6 días</td>
+</tr>
+<tr>
+<td>De 6 meses a 1 año</td>
+<td>13 días</td>
+</tr>
+<tr>
+<td>De 1 a 5 años</td>
+<td>21 días por año</td>
+</tr>
+<tr>
+<td>Más de 5 años</td>
+<td>23 días por año</td>
+</tr>
+</tbody>
+</table>
+<p>Si después de los años completos queda una fracción de 3 a 6 meses, se suman 6 días. Si la fracción es de más de 6 meses, se suman 13 días.</p>
+<p><strong>Vacaciones (arts. 177 y 180).</strong> Si no tomaste tus vacaciones, se pagan <strong>14 días</strong> al año, o <strong>18 días</strong> desde los 5 años de servicio. Si no completaste el año, recibes la parte proporcional del artículo 180: 6 días a los 5 meses, 7 a los 6 meses, y así hasta 12 días a los 11 meses.</p>
+<p><strong>Regalía proporcional.</strong> Es la doceava parte de lo devengado en el año de la salida. Ver la <a href="../calculadora-regalia-pascual-2026/">calculadora de regalía pascual</a>.</p>
+<h2>Desahucio, despido y renuncia: no es lo mismo</h2>
+<ul>
+<li><strong>Desahucio:</strong> el empleador termina el contrato sin alegar causa. Te toca preaviso, cesantía, vacaciones y regalía.</li>
+<li><strong>Renuncia (dimisión simple):</strong> recibes las vacaciones no disfrutadas y la regalía proporcional, pero no preaviso ni cesantía.</li>
+<li><strong>Despido justificado:</strong> el empleador alega una falta grave. Si demuestra la causa, no paga preaviso ni cesantía; si no la demuestra, un tribunal puede condenarlo a pagarlas y más.</li>
+<li><strong>Dimisión justificada:</strong> renuncias por una falta grave del empleador. Si la demuestras, se trata como si te hubieran desahuciado.</li>
+</ul>
+<p>En los despidos y dimisiones con causa, el resultado depende de lo que se pruebe. Consulta a un abogado laboral.</p>
+<h2>Plazo para pagar</h2>
+<p>El empleador debe pagar el preaviso y la cesantía en un plazo de <strong>10 días</strong> desde la terminación del contrato. Si se retrasa, el artículo 86 lo obliga a pagar <strong>un día de salario adicional por cada día de retraso</strong>.</p>
+<h2>Dónde reclamar</h2>
+<p>En el <strong>Ministerio de Trabajo</strong> (mt.gob.do) puedes pedir gratis el cálculo oficial de tus prestaciones y orientación. Ten a mano tu carta de despido o de renuncia, tus volantes de pago y tu fecha de entrada.</p>
+<p><em>Resultado orientativo. No incluye salarios pendientes, horas extra, participación en los beneficios de la empresa ni la indemnización del artículo 86. Confirma con el Ministerio de Trabajo o con un abogado laboral.</em></p></article><aside class="cta">
+<h3>¿Llevas la nómina de tu negocio o de tu casa?</h3>
+<p>La <b>Plantilla Excel Nómina RD 2026</b> calcula sola AFP, SFS, ISR, salario neto, regalía pascual y prestaciones de hasta 30 empleados. Solo escribes el salario. Funciona en Excel y Google Sheets.</p>
+<a class="boton" href="https://jontastic64.gumroad.com/l/nomina-rd-2026">Descargar la plantilla · US$9</a>
+<p class="gratis">¿Compras o vendes un terreno? <a href="https://bsser.github.io/terreno-seguro-rd/">Terreno Seguro RD</a> · ¿Vives fuera? <a href="https://bsser.github.io/tramites-rd-exterior/">Trámites RD Exterior</a></p>
+</aside></main>
+<footer>Resultados orientativos, no sustituyen asesoría legal ni contable. Sitio independiente, no afiliado al Ministerio de Trabajo, la TSS ni la DGII; confirma en mt.gob.do, tss.gob.do y dgii.gov.do.</footer>
+</body></html>
