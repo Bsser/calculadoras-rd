@@ -6,10 +6,10 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 - [x] Calculadoras (`estaticos/calc.js`, prueba: `node test_calc.js`): regalía, salario neto, prestaciones
 - [x] Producto: `Nomina-RD-2026.xlsx` en el repo privado `Bsser/calculadoras-rd-privado` (se genera con `producto/plantilla.py`)
 - [x] Blog: `python build.py` genera `docs/`
-- [ ] Publicado en GitHub Pages: https://bsser.github.io/calculadoras-rd
-- [ ] Gumroad: https://jontastic64.gumroad.com/l/nomina-rd-2026
-- [ ] Google Search Console verificado y sitemap enviado
-- [ ] Tarea diaria programada (calculadoras-rd-diario)
+- [x] Publicado en GitHub Pages: https://bsser.github.io/calculadoras-rd
+- [x] Gumroad: https://jontastic64.gumroad.com/l/nomina-rd-2026 (publicado 2026-11-24, US$9)
+- [x] Google Search Console: verificado (etiqueta meta en build.py, no quitarla) y sitemap enviado
+- [x] Tarea diaria programada (10:00 a. m., tarea calculadoras-rd-diario)
 
 ## Rutina diaria (la tarea programada)
 1. Tomar el primer tema de la cola. Si es una calculadora nueva, agregar la función pura a `estaticos/calc.js`, su caso en `test_calc.js` y el formulario en el .md (patrón: `<form class="calc" id="f-x">` + entrada en `calcs`). Investigar con fuentes oficiales (mt.gob.do, tss.gob.do, dgii.gov.do, Código de Trabajo, Comité Nacional de Salarios) y escribir `contenido/<slug>.md` (700–1200 palabras; sin inventar cifras).
