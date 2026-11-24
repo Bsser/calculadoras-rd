@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de préstamo en RD: cuota mensual, intereses y tabla | Calculadoras RD</title>
+<meta name="description" content="Calcula gratis la cuota fija de tu préstamo (método francés) en pesos dominicanos: cuota mensual, total de intereses, tabla de amortización y cuánto ahorras con abonos a capital.">
+<link rel="canonical" href="https://bsser.github.io/calculadoras-rd/calculadora-prestamo-cuota-rd/">
+<meta name="google-site-verification" content="4F6GvPItG1MgDsxIkhHlMnWlIL_Nr4-tKKIEYM5F8QM">
+<link rel="stylesheet" href="../estilo.css">
+<script src="../calc.js" defer></script>
+</head><body>
+<header><a class="marca" href="../">Calculadoras RD</a><span>Calculadoras laborales gratis para República Dominicana</span></header>
+<main><article><h1>Calculadora de préstamo en RD: cuota mensual, intereses y tabla</h1><p class='fecha'>2026-11-24</p><p>Antes de firmar un préstamo personal, de vehículo o hipotecario, lo primero que quieres saber es <strong>cuánto vas a pagar cada mes</strong> y <strong>cuánto te va a costar en intereses</strong>. Escribe el monto, la tasa anual que te ofrecen y el plazo en meses. Si piensas pagar algo extra cada mes, ponlo en "abono a capital" y verás cuántos meses y cuántos pesos te ahorras.</p>
+<form class="calc" id="f-prestamo">
+<label>Monto del préstamo (RD$)<input id="pt-monto" inputmode="decimal" placeholder="500000" required></label>
+<label>Tasa de interés anual (%)<input id="pt-tasa" inputmode="decimal" placeholder="14" required></label>
+<label>Plazo (meses)<input id="pt-meses" inputmode="numeric" placeholder="60" required></label>
+<label>Abono extra a capital cada mes (RD$, opcional)<input id="pt-abono" inputmode="decimal" placeholder="0"></label>
+<button>Calcular préstamo</button>
+<div class="resultado" id="r-prestamo" aria-live="polite"></div>
+</form>
+
+<h2>Qué es la cuota fija o método francés</h2>
+<p>La mayoría de los préstamos de consumo, de vehículo e hipotecarios se pagan con <strong>cuota fija</strong>: pagas la misma cantidad todos los meses hasta terminar. A esa forma de calcular se le llama <strong>método francés</strong> o sistema de amortización francés.</p>
+<p>Cada cuota tiene dos partes:</p>
+<ul>
+<li><strong>Interés:</strong> lo que le pagas al banco por usar su dinero ese mes. Se calcula sobre lo que todavía debes (el saldo).</li>
+<li><strong>Capital:</strong> la parte que de verdad baja tu deuda.</li>
+</ul>
+<p>La cuota no cambia, pero la mezcla sí: al principio casi todo es interés y, mes a mes, la parte de capital va creciendo.</p>
+<p>La fórmula es esta, donde <em>i</em> es la tasa mensual (tasa anual ÷ 12 ÷ 100) y <em>n</em> el número de meses:</p>
+<p><strong>Cuota = monto × i ÷ (1 − (1 + i)<sup>−n</sup>)</strong></p>
+<p>Si la tasa es 0%, la cuota es simplemente el monto dividido entre los meses.</p>
+<h2>Ejemplo con números</h2>
+<p>Te ofrecen <strong>RD$500,000</strong> al <strong>14% anual</strong> a <strong>60 meses</strong> (5 años).</p>
+<ol>
+<li>Tasa mensual: 14 ÷ 12 = 1.1667% al mes.</li>
+<li>Cuota fija: <strong>RD$11,634.13</strong> al mes.</li>
+<li>Total pagado en 60 cuotas: unos <strong>RD$698,047</strong>.</li>
+<li>Total de intereses: unos <strong>RD$198,047</strong>, casi el 40% de lo que te prestaron.</li>
+</ol>
+<p>Otro caso, un préstamo largo: <strong>RD$1,000,000</strong> al <strong>12% anual</strong> a <strong>240 meses</strong> (20 años). La cuota es de <strong>RD$11,010.86</strong>. Parece parecida a la del ejemplo anterior, pero al final pagas unos RD$2,642,607: más de <strong>RD$1.6 millones solo en intereses</strong>. Alargar el plazo baja la cuota, pero encarece mucho el préstamo.</p>
+<p>Los centavos pueden variar un poco respecto a la tabla del banco, porque cada entidad redondea a su manera y a veces ajusta la última cuota.</p>
+<h2>Por qué las primeras cuotas son casi todo interés</h2>
+<p>En el primer mes del préstamo de RD$500,000, el interés se calcula sobre la deuda completa: 500,000 × 1.1667% = <strong>RD$5,833.33</strong>. De tu cuota de RD$11,634.13, solo <strong>RD$5,800.79</strong> van a capital. Es decir, la mitad de lo que pagas ese mes se va en intereses.</p>
+<p>En todo el primer año pagas unos RD$139,610 en cuotas, y de eso unos <strong>RD$65,355 son intereses</strong>. Después de 12 pagos todavía debes más del 80% del préstamo.</p>
+<p>En el préstamo de 20 años es más marcado: el primer mes pagas <strong>RD$10,000 de interés</strong> y apenas RD$1,010.86 de capital. Por eso, si cancelas o refinancias un préstamo en los primeros años, te puede sorprender lo poco que ha bajado el saldo. La tabla de la calculadora te muestra los primeros 12 meses para que lo veas.</p>
+<h2>Tasa nominal vs. costo real del préstamo</h2>
+<p>La tasa que te dicen en la oficina o en el anuncio suele ser la <strong>tasa nominal anual</strong>, y es la que usa esta calculadora. Pero el préstamo te puede costar más por otros cargos:</p>
+<ul>
+<li><strong>Comisiones</strong> de apertura, de desembolso o de manejo.</li>
+<li><strong>Gastos de cierre</strong>: tasación, abogado, notario, registro de la garantía (sobre todo en hipotecas y vehículos).</li>
+<li><strong>Seguros</strong> que se cobran junto con la cuota: seguro de vida sobre el saldo, seguro del vehículo o de la vivienda.</li>
+</ul>
+<p>Si te descuentan una comisión del monto, recibes menos dinero pero pagas intereses sobre el monto completo. Y si cada mes te suman seguros, tu pago real es más alto que la cuota que da la fórmula. Para comparar dos ofertas, no mires solo la tasa: suma todo lo que vas a pagar de verdad y compáralo con lo que vas a recibir en la mano.</p>
+<h2>Qué hace un abono a capital</h2>
+<p>Un <strong>abono a capital</strong> (o abono extraordinario) es dinero que pagas por encima de la cuota y que va directo a bajar el saldo. Como el interés de cada mes se calcula sobre el saldo, todo lo que bajes hoy deja de generar intereses el resto del préstamo.</p>
+<p>Con el mismo préstamo de RD$500,000 al 14% a 60 meses, si abonas <strong>RD$2,000 extra cada mes</strong>:</p>
+<ul>
+<li>Terminas en <strong>49 meses</strong> en vez de 60: casi <strong>un año menos</strong>.</li>
+<li>Pagas unos <strong>RD$41,700 menos de intereses</strong>.</li>
+</ul>
+<p>Hay dos formas de aplicar un abono: <strong>reducir el plazo</strong> (sigues con la misma cuota y terminas antes, que es lo que calcula esta página) o <strong>reducir la cuota</strong> (sigues con el mismo plazo pero pagas menos cada mes). Reducir el plazo suele ahorrar más intereses. Pregunta al banco cuál de las dos aplica y pide que te lo confirme por escrito cada vez que abones.</p>
+<h2>Preguntas que debes hacerle al banco antes de firmar</h2>
+<ol>
+<li><strong>¿La tasa es fija o variable?</strong> Si es variable, ¿cada cuánto puede cambiar y con qué referencia?</li>
+<li><strong>¿Hay penalidad por pago anticipado o por abonos a capital?</strong> ¿Cuánto es y durante cuánto tiempo aplica?</li>
+<li><strong>¿Qué comisiones, gastos de cierre y seguros voy a pagar?</strong> Pide el monto en pesos, no solo el porcentaje.</li>
+<li><strong>¿Cuánto voy a recibir en mi cuenta</strong>, después de descuentos?</li>
+<li><strong>¿Me pueden dar la tabla de amortización por escrito</strong>, con la cuota, el interés, el capital y el saldo de cada mes?</li>
+<li><strong>¿Qué pasa si me atraso?</strong> Cargos por mora y desde qué día se cobran.</li>
+</ol>
+<p>Con la tabla del banco en la mano, compárala con la de esta calculadora. Si la cuota del banco es bastante más alta, pregunta qué cargos explican la diferencia.</p>
+<aside class="cta">
+<h3>¿Quieres comparar ofertas con el costo real?</h3>
+<p>La <b>Plantilla Excel Calculadora de Préstamos RD</b> te da la tabla de amortización completa de hasta 360 meses, el costo real con comisión, gastos de cierre y seguro, el efecto de los abonos extraordinarios y una comparación lado a lado de 3 ofertas de préstamo.</p>
+<a class="boton" href="https://jontastic64.gumroad.com/l/calculadora-prestamos-rd">Descargar la plantilla · US$5</a>
+</aside>
+
+<p><em>Resultados orientativos. La calculadora usa la tasa nominal anual dividida entre 12 y no incluye comisiones, seguros ni otros cargos. No es asesoría financiera: confirma siempre las condiciones y la tabla de amortización con tu banco o entidad financiera antes de firmar.</em></p></article><aside class="cta">
+<h3>¿Llevas la nómina de tu negocio o de tu casa?</h3>
+<p>La <b>Plantilla Excel Nómina RD 2026</b> calcula sola AFP, SFS, ISR, salario neto, regalía pascual y prestaciones de hasta 30 empleados. Solo escribes el salario. Funciona en Excel y Google Sheets.</p>
+<a class="boton" href="https://jontastic64.gumroad.com/l/nomina-rd-2026">Descargar la plantilla · US$9</a>
+<p class="gratis">Más plantillas Excel: <a href="https://jontastic64.gumroad.com/l/inventario-ventas-rd">inventario y ventas con ITBIS (US$9)</a> · <a href="https://jontastic64.gumroad.com/l/presupuesto-familiar-rd">presupuesto familiar y deudas (US$5)</a> · <a href="https://jontastic64.gumroad.com/l/control-alquileres-rd">control de alquileres (US$9)</a> · <a href="https://jontastic64.gumroad.com/l/cotizaciones-cobros-rd">cotizaciones y cuentas por cobrar (US$9)</a> · <a href="https://jontastic64.gumroad.com/l/calculadora-prestamos-rd">calculadora de préstamos (US$5)</a></p>
+<p class="gratis">¿Compras o vendes un terreno? <a href="https://bsser.github.io/terreno-seguro-rd/">Terreno Seguro RD</a> · ¿Vives fuera? <a href="https://bsser.github.io/tramites-rd-exterior/">Trámites RD Exterior</a></p>
+</aside></main>
+<footer>Resultados orientativos, no sustituyen asesoría legal ni contable. Sitio independiente, no afiliado al Ministerio de Trabajo, la TSS ni la DGII; confirma en mt.gob.do, tss.gob.do y dgii.gov.do.</footer>
+</body></html>

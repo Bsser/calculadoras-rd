@@ -68,7 +68,30 @@ function horasExtra(salarioMensual, horasSemana, jornada = R.jornada) {
   return { hora, h35, h100, p35, p100, total: p35 + p100 };
 }
 
-if (typeof module !== "undefined") module.exports = { isrAnual, salarioNeto, regalia, preaviso, cesantia, vacaciones, prestaciones, horasExtra };
+// Préstamo con cuota fija (método francés). tasaAnual en %, nominal anual ÷ 12. abono = pago extra a capital cada mes.
+function prestamo(monto, tasaAnual, meses, abono = 0) {
+  const i = tasaAnual / 100 / 12;
+  const cuota = i ? monto * i / (1 - Math.pow(1 + i, -meses)) : monto / meses;
+  const plan = (extra) => {
+    let saldo = monto, intereses = 0;
+    const tabla = [];
+    while (saldo > 0.005 && tabla.length < meses) {
+      const interes = saldo * i, pago = Math.min(cuota + extra, saldo + interes);
+      intereses += interes; saldo += interes - pago;
+      tabla.push({ mes: tabla.length + 1, pago, interes, capital: pago - interes, saldo: Math.max(0, saldo) });
+    }
+    return { intereses, tabla };
+  };
+  const base = plan(0), r = { cuota, intereses: base.intereses, total: monto + base.intereses, meses, tabla: base.tabla };
+  if (abono > 0) {
+    const con = plan(abono);
+    Object.assign(r, { mesesConAbono: con.tabla.length, mesesAhorrados: meses - con.tabla.length,
+      interesesConAbono: con.intereses, interesesAhorrados: base.intereses - con.intereses, tabla: con.tabla });
+  }
+  return r;
+}
+
+if (typeof module !== "undefined") module.exports = { isrAnual, salarioNeto, regalia, preaviso, cesantia, vacaciones, prestaciones, horasExtra, prestamo };
 
 // ---------- página ----------
 if (typeof document !== "undefined") {
@@ -106,6 +129,16 @@ if (typeof document !== "undefined") {
         fila(`${r.h100} h extra al 200%`, rd(r.p100)),
         fila("Pago por horas extra en la semana", rd(r.total), 1),
       ]);
+    },
+    "f-prestamo": () => {
+      const ab = n("pt-abono"), r = prestamo(n("pt-monto"), n("pt-tasa"), Math.max(1, Math.round(n("pt-meses"))), ab);
+      const filas = [fila("Cuota mensual fija", rd(r.cuota), 1), fila("Total de intereses", rd(r.intereses)), fila("Total pagado", rd(r.total))];
+      if (ab > 0) filas.push(
+        fila(`Con abono de ${rd(ab)} al mes terminas en`, `${r.mesesConAbono} meses`),
+        fila("Meses que te ahorras", String(r.mesesAhorrados)),
+        fila("Intereses que te ahorras", rd(r.interesesAhorrados), 1));
+      const amort = r.tabla.slice(0, 12).map((t) => `<tr><td>${t.mes}</td><td>${rd(t.pago)}</td><td>${rd(t.interes)}</td><td>${rd(t.capital)}</td><td>${rd(t.saldo)}</td></tr>`).join("");
+      $("r-prestamo").innerHTML = `<table>${filas.join("")}</table><h3>Primeros 12 meses</h3><table><tr><th>Mes</th><th>Pago</th><th>Interés</th><th>Capital</th><th>Saldo</th></tr>${amort}</table>`;
     },
   };
   for (const [form, fn] of Object.entries(calcs)) {

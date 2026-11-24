@@ -31,4 +31,12 @@ cerca(he.hora, 125); assert.strictEqual(he.h35, 6); cerca(he.total, 6 * 125 * 1.
 const he2 = c.horasExtra(23830, 72);                            // 24 h al 35% + 4 h al 100%
 assert.strictEqual(he2.h35, 24); assert.strictEqual(he2.h100, 4); cerca(he2.total, 4050 + 1000);
 assert.strictEqual(c.horasExtra(23830, 40).total, 0);
+
+const pr = c.prestamo(500000, 14, 60);                          // cuota 11,634.13, intereses ≈ 198,047
+assert.strictEqual(pr.cuota.toFixed(2), "11634.13"); cerca(pr.intereses, 198047.43); cerca(pr.total, 698047.43);
+assert.strictEqual(c.prestamo(1000000, 12, 240).cuota.toFixed(2), "11010.86");
+cerca(c.prestamo(500000, 0, 60).cuota, 500000 / 60); assert.strictEqual(c.prestamo(500000, 0, 60).intereses, 0);
+const pa = c.prestamo(500000, 14, 60, 2000);                     // abono de 2,000 al mes
+assert.strictEqual(pa.mesesConAbono, 49); assert.strictEqual(pa.mesesAhorrados, 11); assert.ok(pa.interesesAhorrados > 0);
+cerca(pa.tabla[pa.tabla.length - 1].saldo, 0);
 console.log("OK: calculadoras");

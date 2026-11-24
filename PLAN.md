@@ -24,7 +24,7 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 - [ ] Calculadora de vacaciones (días que te tocan y cuánto cobras)
 - [ ] Calculadora de ITBIS (18%): sumar y quitar el impuesto
 - [ ] Cuánto le cuesta un empleado al empleador en RD (TSS + INFOTEP)
-- [ ] Calculadora de préstamo: cuota mensual (sistema francés)
+- [x] Calculadora de préstamo: cuota mensual (sistema francés)
 - [ ] Calculadora de pensión AFP: cuánto llevas acumulado (orientativo)
 - [ ] Derechos y regalía de la trabajadora doméstica (confirmar la norma vigente en mt.gob.do antes de escribir)
 - [ ] Bonificación (participación en beneficios, art. 223): cómo se calcula
@@ -43,3 +43,4 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 ## Registro
 - 2026-11-24: calculadoras, plantilla Excel y sitio con 3 páginas creados.
 - 2026-11-24: calculadora-horas-extra-rd (calculadora de horas extra, art. 203).
+- 2026-11-24: calculadora-prestamo-cuota-rd (cuota fija, método francés, abono a capital; CTA a la plantilla de préstamos US$5).
