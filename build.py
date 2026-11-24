@@ -36,6 +36,7 @@ CTA = f"""<aside class="cta">
 <h3>¿Llevas la nómina de tu negocio o de tu casa?</h3>
 <p>La <b>Plantilla Excel Nómina RD 2026</b> calcula sola AFP, SFS, ISR, salario neto, regalía pascual y prestaciones de hasta 30 empleados. Solo escribes el salario. Funciona en Excel y Google Sheets.</p>
 <a class="boton" href="{TIENDA}">Descargar la plantilla · {PRECIO}</a>
+<p class="gratis">Más plantillas Excel: <a href="https://jontastic64.gumroad.com/l/inventario-ventas-rd">inventario y ventas con ITBIS (US$9)</a> · <a href="https://jontastic64.gumroad.com/l/presupuesto-familiar-rd">presupuesto familiar y deudas (US$5)</a> · <a href="https://jontastic64.gumroad.com/l/control-alquileres-rd">control de alquileres (US$9)</a></p>
 <p class="gratis">¿Compras o vendes un terreno? <a href="https://bsser.github.io/terreno-seguro-rd/">Terreno Seguro RD</a> · ¿Vives fuera? <a href="https://bsser.github.io/tramites-rd-exterior/">Trámites RD Exterior</a></p>
 </aside>"""
 
