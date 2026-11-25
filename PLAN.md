@@ -20,7 +20,7 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 
 ## Cola de temas (SEO)
 - [x] Calculadora de horas extra en RD (art. 203: 35% y 100%)
-- [ ] Salario mínimo 2026 en RD por tamaño de empresa y sector (tabla)
+- [x] Salario mínimo 2026 en RD por tamaño de empresa y sector (tabla)
 - [ ] Calculadora de vacaciones (días que te tocan y cuánto cobras)
 - [ ] Calculadora de ITBIS (18%): sumar y quitar el impuesto
 - [ ] Cuánto le cuesta un empleado al empleador en RD (TSS + INFOTEP)
@@ -44,3 +44,4 @@ Meta: ingresos pasivos con una plantilla Excel de nómina (US$9). Calculadoras g
 - 2026-11-24: calculadoras, plantilla Excel y sitio con 3 páginas creados.
 - 2026-11-24: calculadora-horas-extra-rd (calculadora de horas extra, art. 203).
 - 2026-11-24: calculadora-prestamo-cuota-rd (cuota fija, método francés, abono a capital; CTA a la plantilla de préstamos US$5).
+- 2026-11-25: salario-minimo-2026-rd (tabla del salario mínimo por tamaño de empresa y sector; construcción remitida al MT por cifras no confirmadas).
